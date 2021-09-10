@@ -32,7 +32,7 @@ DEBUG = True
 # ALLOWED_HOSTS = ['*']
 
 ALLOWED_HOSTS = ['https://bytesizearxiv.org', 'http://bytesizearxiv.org', 'bsa-web.herokuapp.com', '127.0.0.1',
-                 '127.0.0.1:8000', 'https://www.bytesizearxiv.org', 'www.bytesizearxiv.org', 'bytesizearxiv.org']
+                 '127.0.0.1:8050', 'https://www.bytesizearxiv.org', 'www.bytesizearxiv.org', 'bytesizearxiv.org']
 
 # Application definition
 

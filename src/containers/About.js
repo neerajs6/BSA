@@ -22,6 +22,7 @@ class About extends Component {
           articleData:[],
           loading:false,
           dateState:'',
+          current: "Submit",
       }
     }
 
@@ -52,6 +53,7 @@ class About extends Component {
     async onFinish (values) {
         console.log(values);
         const url = 'https://bsa-web.herokuapp.com/store_email';
+        // const url = 'http://127.0.0.1:8050/store_email';
         const response = await fetch(url , {
         method: 'POST',
         headers: {
@@ -78,10 +80,12 @@ class About extends Component {
       current: 'Submit',
       visible: false
     }
-    changeText = (current) => {
+    changeText = (text) => {
 
-        this.setState({ current });
-        };
+        this.setState({
+          current : text,
+        });
+    };
     showDrawer = () => {
       this.setState({
         visible: true,
@@ -94,7 +98,8 @@ class About extends Component {
     };
     render() {
         const { current, articleData } = this.state
-        console.log("data",articleData);
+        // console.log("data",articleData);
+        console.log("btn:",current);
       return (
         <Layout className="layout">
           <Header className="header-bar">
